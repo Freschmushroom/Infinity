@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Menu name="Multiplayer">
+	<Include>MainMenu.xml</Include>
+	<IncludeNative>/natives/Game.nxml</IncludeNative>
+	<Item name="connect" display="Connect">
+		<Action priority="HIGHEST">
+			<Operation>Game.connect</Operation>
+		</Action>
+	</Item>
+	<Item name="back" display="Back">
+		<Action priority="HIGHEST">
+			<ChangeScreen>MainMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Screen name="screen">
+		<Layout>
+			<Background>
+				<Color r="255" g="255" b="255"></Color>
+			</Background>
+		</Layout>
+		<Button item="connect">connect.display</Button>
+		<Button item="back">back.display</Button>
+	</Screen>
+</Menu>

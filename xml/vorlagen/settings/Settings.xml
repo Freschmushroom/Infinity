@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Settings>
+	<Sound name="sound">true</Sound>
+	<Music name="music">true</Music>
+	<Resolution name="resolution">800x600</Resolution>
+</Settings>

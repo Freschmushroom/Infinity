@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<MakeFile>
+	<BuildInfo cleanup="true" buildpath="user.dir/bin/"><BuildInfo>
+	<LocalPath>user.dir</LocalPath>
+	<Root>user.dir</Root>
+	<Structure location="/">
+		<Folder>/</Folder>
+		<Folder>/menu/</Folder>
+		<Folder>/natives/</Folder>
+		<Folder>/settings/<Folder>
+	</Structure>
+	<Uses>xmlVB</Uses>
+	<MakeNative>/natives/Game.nxml</MakeNative>
+	<MakeNative>/natives/Program.nxml</MakeNative>
+	<Make>/menu/NewGameMenu.xml</Make>
+	<Make>/menu/LoadGameMenu.xml</Make>
+	<Make>/menu/SingleMenu.xml</Make>
+	<Make>/menu/MultiMenu.xml</Make>
+	<Make>/menu/MainMenu.xml</Make>
+	<Copy>/settings/Settings.xml</Settings>
+</MakeFile>

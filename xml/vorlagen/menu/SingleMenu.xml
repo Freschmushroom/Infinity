@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<Menu name="Single Player">
+	<Include>LoadGameMenu,xml</Include>
+	<Include>NewGameMenu.xml</Include>
+	<Include>MainMenu.xml</Include>
+	<Item name="load" display="Load Game">
+		<Action priority="HIGHEST">
+			<ChangeScreen>LoadGameMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Item name="new" display="New Game">
+		<Action priority="HIGHEST">
+			<ChangeScreen>NewGameMenu.screen</ChangeScreen>
+		<Action>
+	</Item>
+	<Item name="back" display="Back">
+		<Action priority="HIGHEST">
+			<ChangeScreen>MainMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Screen name="screen">
+		<Layout>
+			<Background>
+				<Color r="255" g="255" b="255"></Color>
+			</Background>
+		</Layout>
+		<Button item="load">load.display</Button>
+		<Button item="new">new.display</Button>
+		<Button item="back">back.display</Button>
+	</Screen>
+</Menu>

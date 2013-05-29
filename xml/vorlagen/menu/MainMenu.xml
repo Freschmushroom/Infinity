@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<Menu name="Main Menu">
+	<Include>SingleMenu.xml</Include>
+	<Include>MultiMenu.xml</Include>
+	<Include>Options.xml</Include>
+	<IncludeNative>/natives/Program.nxml</IncludeNative>
+	<Item name="single" display="Singleplayer">
+		<Action priority="HIGHEST">
+			<ChangeScreen>SingleMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Item name="multi" display="Multiplayer">
+		<Action priority="HIGHEST">
+			<ChangeScreen>MultiMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Item name="options" display="Options">
+		<Action priority="HIGHEST">
+			<ChangeScreen>Options.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Item name="end" display="Exit">
+		<Action priority="LEAST">
+			<Operation>Program.end</Operation>
+		</Action>
+	</Item>
+	<Screen name="screen">
+		<Layout>
+			<Background>
+				<Color r="255" g="255" b="255"></Color>
+			</Background>
+		</Layout>
+		<Button item="single">single.display</Button>
+		<Button item="multi">multi.display</Button>
+		<Button item="options">options.display</Button>
+		<Button item="end">end.display</Button>
+	</Screen>
+</Menu>

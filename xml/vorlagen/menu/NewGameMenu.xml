@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<Menu name="New Game">
+	<Include>SingleMenu.xml</Include>
+	<IncludeNative>/natives/Game.nxml</IncludeNative>
+	<Uses>xmlVB</Uses>
+	<Item name="new" display="Create Game">
+		<Action priority="HIGHEST">
+			<Operation>Game.new(version.selected)</Operation>
+		</Action>
+	</Item>
+	<Item name="back" display="Back">
+		<Action priority="HIGHEST">
+			<ChangeScreen>SingleMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Screen name="screen">
+		<Layout>
+			<Background>
+				<Color r="255" g="255" b="255"></Color>
+			</Background>
+		</Layout>
+		<Label>Version</Version>
+		<Dropdown name="version">
+			<Script type="xmlVB">
+				<ForEach expr="String s : $AvailableVersions">
+					<Value>s</Value>
+				</ForEach>
+			</Script>
+		</Dropdown>
+		<Button item="new">new.display</Button>
+		<Button item="back">back.display</Button>
+	</Screen>
+</Menu>

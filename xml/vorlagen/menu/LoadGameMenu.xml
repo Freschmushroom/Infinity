@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<Menu name="Load Game">
+	<Include>SingleMenu.xml</Include>
+	<IncludeNative>/natives/Game.nxml</IncludeNative>
+	<Uses>xmlVB</Uses>
+	<Background>
+		<Color r="255" g="255" b="255"></Color>
+	</Background>
+	<Script type="xmlVB">
+		<ForEach expr="File f : $SavegameDir">
+			<Item name="f.name" display="f.name">
+				<Action priority="HIGHEST">
+					<Operation>Game.load(f)</Operation>
+				</Action>
+			</Item>
+		</ForEach>
+	</Script>
+	<Item name="back" display="Back">
+		<Action priority="HIGHEST">
+			<ChangeScreen>SingleMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Screen name="screen">
+		<Layout>
+			<Background>
+				<Color r="255" g="255" b="255"></Color>
+			</Background>
+		</Layout>
+		<Script type="xmlVB">
+			<ForEach expr="File f : $SavegameDir">
+				<Button item="%f.name">f.name</Button>
+			</ForEach>
+		</Script>
+		<Button item="back">back.display</Button>
+	</Screen>
+</Menu>

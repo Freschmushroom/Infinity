@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<Menu name="Options">
+	<Include>MainMenu.xml</Include>
+	<Include>/settings/Settings.xml</Include>
+	<Uses>xmlVB<Uses>
+	<Item name="save" display="Save">
+		<Action priority="HIGHEST">
+			<Change field="Settings.sound">sound</Change>
+			<Change field="Settings.music">music</Change>
+			<Change field="Settings.resolution">resolution</Change>
+		</Action>
+	</Item>
+	<Item name="back" display="Back">
+		<Action priority="HIGHEST">
+			<ChangeScreen>MainMenu.screen</ChangeScreen>
+		</Action>
+	</Item>
+	<Screen name="screen">
+		<Label>Sound</Label>
+		<CheckBox name="sound"></CheckBox>
+		<Label>Music</Label>
+		<CheckBox name="music"></CheckBox>
+		<Label>Resolution</Label>
+		<ComboBox name="resolution">
+			<Script type="xmlVB">
+				<ForEach expr="String s : $AvailableResolutions">
+					<Value>s</Value>
+				</ForEach>
+			</Script>
+		</ComboBox>
+		<Button item="save">save.display</Button>
+		<Button item="back">back.display</Button>
+	</Screen>
+</Menu>

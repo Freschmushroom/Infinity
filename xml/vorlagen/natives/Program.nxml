@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Native>
+	<NativeMethod name="end">
+		saveSettings();
+		finalize();
+		destroyGLAL();
+		end();
+	</NativeMethod>
+</Native>
